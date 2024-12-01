@@ -5,7 +5,7 @@ let fonasaOnly = false;
 
 async function loadServices() {
   try {
-    const res = await fetch('./scripts/services.json');
+    const res = await fetch('./src/data/services.json');
     if (!res.ok) {
       console.error(`Response status: ${Response.status}`);
       return null;
@@ -19,7 +19,7 @@ async function loadServices() {
 
 async function loadDoctors() {
   try {
-    const res = await fetch('./scripts/doctors.json');
+    const res = await fetch('./src/data/doctors.json');
     if (!res.ok) {
       console.error(`Response status: ${Response.status}`);
       return null;

@@ -1,0 +1,22 @@
+{
+  "general": {
+    "fonasa": 15000,
+    "isapre": 12000
+  },
+  "surgery": {
+    "fonasa": 60000,
+    "isapre": 45000
+  },
+  "traumatology": {
+    "fonasa": 50000,
+    "isapre": 40000
+  },
+  "dentist": {
+    "fonasa": 16000,
+    "isapre": 16000
+  },
+  "psicology": {
+    "fonasa": 12000,
+    "isapre": 10000
+  }
+}

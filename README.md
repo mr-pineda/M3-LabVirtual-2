@@ -39,7 +39,7 @@ En todas las pantallas Hay un boton para agendar Hora, el cual solicita datos me
 
 1. Programación Funcional en JavaScript:
 
-   - [ ] Implementa una función que use **currying** para calcular el costo total de los servicios de un paciente en función del número de consultas realizadas y el precio de cada consulta.
+   - [x] Implementa una función que use **currying** para calcular el costo total de los servicios de un paciente en función del número de consultas realizadas y el precio de cada consulta.
    - [ ] Usa la **función flecha** para simplificar la sintaxis en una función que calcule el tiempo promedio de espera de los pacientes.
    - [ ] Implementa la **recursión** para calcular de forma recursiva el total de horas de consulta de un doctor a lo largo de la semana.
    - [ ] Integra **composición de funciones** para aplicar descuentos a los costos de consultas en base a la cantidad de consultas realizadas.

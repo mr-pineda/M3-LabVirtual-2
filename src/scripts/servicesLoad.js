@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', listServices);
 
 async function loadServices() {
   try {
-    const res = await fetch('./scripts/services.json');
+    const res = await fetch('./src/data/services.json');
     if (!res.ok) {
       console.error(`Response status: ${Response.status}`);
       return null;

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Top Top | Inicio</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <header class="navbar fixed-top bg-primary pt-1 pb-1">
+      <div class="navbar-brand fw-bold text-light ps-1 col">
+        <img
+          src="assets/img/logo.png"
+          alt="Logo del Hospital"
+          height="30"
+          width="30"
+        />
+        Hospital Top Top Top
+      </div>
+      <nav class="header__nav">
+        <a
+          class="header__nav__link text-decoration-none text-light bg-dark fw-bold rounded"
+          href="index.html"
+          >Inicio</a
+        >
+        <a
+          class="header__nav__link text-decoration-none text-light"
+          href="about.html"
+          >Equipo Médico</a
+        >
+        <a
+          class="header__nav__link text-decoration-none text-light"
+          href="contact.html"
+          >Contacto</a
+        >
+      </nav>
+    </header>
+    <section class="showcase">
+      <h1 class="showcase__title">Hospital Top Top Top</h1>
+      <p class="showcase__subtitle">N° 1 en el Ranking de Calidad</p>
+    </section>
+
+    <section>
+      <h1>Costo de servicios</h1>
+      <form>
+        <div class="mb-3">
+          <label for="name_input" class="form-label">Paciente</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name_input"
+            aria-describedby="nameHelp"
+          />
+          <div id="nameHelp" class="form-text">
+            Ingrese nombre y apellido del Paciente
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <div class="col">
+            <label for="count_input" class="form-label"
+              >Número de consultas realizadas:</label
+            >
+            <input type="number" class="form-control" id="count_input" />
+          </div>
+          <div class="col">
+            <label for="price_selector" class="form-label"
+              >Precio por consulta</label
+            >
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              id="price_selector"
+            >
+              <option selected value="none">Seleccione tipo de consulta</option>
+              <option value="general">Consulta general</option>
+              <option value="surgery">Cirugía</option>
+              <option value="traumatology">Traumatología</option>
+              <option value="dentist">Odontología</option>
+              <option value="psicology">Psicología</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-check col">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="previsionRadio"
+              id="fonasaCheckbox"
+              value="fonasa"
+              checked
+            />
+            <label class="form-check-label" for="fonasaCheckbox">
+              Fonasa
+            </label>
+          </div>
+          <div class="form-check col">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="previsionRadio"
+              value="isapre"
+              id="isapreCheckbox"
+            />
+            <label class="form-check-label" for="isapreCheckbox">
+              Isapre
+            </label>
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="getTotalPrice()">
+          Calcular Precio
+        </button>
+      </form>
+      <div>
+        <h2>Resultados</h2>
+        <div class="row">
+          <div class="col">
+            <p id="display_count">Cantiad de consultas: ---</p>
+          </div>
+          <div class="col">
+            <p id="display_serv_price">Precio por consulta: $ ---</p>
+          </div>
+          <div class="col">
+            <p id="display_total_price">Total: $ ---</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__section">
+        <h3 class="footer__section__title">Telefonos:</h3>
+        <ul class="footer__section__details">
+          <li class="footer__section__details__item">
+            URGENCIAS: <a href="">111 333 111</a>
+          </li>
+          <li class="footer__section__details__item">
+            Informaciones: <a href="">1111 2222 3333</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__section">
+        <h3 class="footer__section__title">Correos:</h3>
+        <ul class="footer__section__details">
+          <li class="footer__section__details__item">
+            Informaciones: <a href="">contacto@htoptop.cl</a>
+          </li>
+          <li class="footer__section__details__item">
+            Reserva de horas: <a href="">reserva@htoptop.cl</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__section">
+        <h3 class="footer__section__title">Ubicación:</h3>
+        <ul class="footer__section__details">
+          <li class="footer__section__details__item">
+            Ministro Carvajal esquina Ministro Carvajal,
+          </li>
+          <li class="footer__section__details__item">Titirilquen,</li>
+          <li class="footer__section__details__item">Chile</li>
+        </ul>
+      </div>
+    </footer>
+    <script src="src/scripts/controlPanel.js"></script>
+  </body>
+</html>
