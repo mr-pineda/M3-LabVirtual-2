@@ -1,0 +1,19 @@
+@use '../abstracts';
+@import '../abstracts';
+
+.team__section {
+  padding: 5rem 4rem;
+}
+
+@include breakpoint('medium') {
+  .team__section {
+    padding: 2rem 5%;
+  }
+}
+
+@include breakpoint('small') {
+  // Team
+  .team__section {
+    padding: 2rem 0;
+  }
+}
