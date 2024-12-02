@@ -39,3 +39,22 @@ const getTotalPrice = async () => {
     'display_total_price'
   ).textContent = `Total: $${totalPrice}`;
 };
+
+const getWaitTime = () => {
+  const workedHours = parseInt(
+    document.getElementById('worked_hours_input').value
+  );
+  const pacientCount = parseInt(
+    document.getElementById('pacient_count_input').value
+  );
+  if (isNaN(workedHours) || isNaN(pacientCount)) {
+    console.log('Invalid entry');
+    return;
+  }
+  const waitTime = (workedHours * 60) / pacientCount;
+  document.getElementById(
+    'meanWaitTime'
+  ).textContent = `Tiempo de espera promedio por paciente: ${waitTime.toFixed(
+    2
+  )} min`;
+};

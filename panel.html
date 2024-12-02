@@ -40,9 +40,10 @@
       <p class="showcase__subtitle">N° 1 en el Ranking de Calidad</p>
     </section>
 
-    <section>
+    <section class="mb-5">
       <h1>Costo de servicios</h1>
-      <form>
+      <h2>Ingrese datos</h2>
+      <form class="mb-3">
         <div class="mb-3">
           <label for="name_input" class="form-label">Paciente</label>
           <input
@@ -124,6 +125,42 @@
             <p id="display_total_price">Total: $ ---</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section>
+      <h1>Tiempo de espera promedio</h1>
+      <form class="mb-3">
+        <div class="mb-3">
+          <label for="name_input" class="form-label">Doctor</label>
+          <input type="text" class="form-control" id="doctor_name_input" />
+        </div>
+        <div class="mb-3 row">
+          <div class="col">
+            <label for="worked_hours_input" class="form-label"
+              >Horas trabajadas</label
+            >
+            <input type="number" class="form-control" id="worked_hours_input" />
+          </div>
+          <div class="col">
+            <label for="pacient_count_input" class="form-label"
+              >Pacientes atendidos</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="pacient_count_input"
+            />
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="getWaitTime()">
+          Calcular
+        </button>
+      </form>
+      <div>
+        <h2 id="meanWaitTime">
+          Tiempo de espera promedio por paciente: --- min
+        </h2>
       </div>
     </section>
 
