@@ -15,6 +15,16 @@ const getServicesPrices = async () => {
 const calculatePrice = (priceData) => (count) => (service) => (prevision) =>
   count * priceData[service][prevision];
 
+const computeDiscount = (count, price) => {
+  if (count > 10) return price * 0.85;
+  if (count > 5) return price * 0.9;
+  if (count > 2) return price * 0.95;
+  return price;
+};
+
+const getDiscountedPrice = (priceData, count, service, prevision) =>
+  computeDiscount(count, calculatePrice(priceData)(count)(service)(prevision));
+
 const getTotalPrice = async () => {
   const count = parseInt(document.getElementById('count_input').value);
   const service = document.getElementById('price_selector').value;
@@ -28,6 +38,12 @@ const getTotalPrice = async () => {
   }
   const priceData = await getServicesPrices();
   const totalPrice = calculatePrice(priceData)(count)(service)(prevision);
+  const discountPrice = getDiscountedPrice(
+    priceData,
+    count,
+    service,
+    prevision
+  );
 
   document.getElementById(
     'display_count'
@@ -37,7 +53,10 @@ const getTotalPrice = async () => {
   ).textContent = `Precio por consulta: $${priceData[service][prevision]}`;
   document.getElementById(
     'display_total_price'
-  ).textContent = `Total: $${totalPrice}`;
+  ).textContent = `Total sin descuento: $${totalPrice}`;
+  document.getElementById(
+    'display_disc_price'
+  ).textContent = `Con decuento aplicado: $${discountPrice}`;
 };
 
 const getWaitTime = () => {
@@ -58,8 +77,6 @@ const getWaitTime = () => {
     2
   )} min`;
 };
-
-const pacients_attended = 20;
 
 const computeWeekHours = (count, minutesPerPacient) => {
   if (count === 0) return 0;
