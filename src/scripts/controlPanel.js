@@ -58,3 +58,29 @@ const getWaitTime = () => {
     2
   )} min`;
 };
+
+const pacients_attended = 20;
+
+const computeWeekHours = (count, minutesPerPacient) => {
+  if (count === 0) return 0;
+  return (
+    minutesPerPacient / 60 + computeWeekHours(count - 1, minutesPerPacient)
+  );
+};
+
+const getWeekHours = () => {
+  const pacientCount = parseInt(
+    document.getElementById('pacient_count_input2').value
+  );
+  const minutesPerPacient = parseInt(
+    document.getElementById('attention_time').value
+  );
+  if (isNaN(minutesPerPacient) || isNaN(pacientCount)) {
+    console.log('Invalid entry');
+    return;
+  }
+  const workedHours = computeWeekHours(pacientCount, minutesPerPacient);
+  document.getElementById(
+    'weekHours'
+  ).textContent = `Horas trabajadas en la semana: ${workedHours.toFixed(2)}`;
+};

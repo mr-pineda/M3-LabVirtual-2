@@ -128,7 +128,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="mb-5">
       <h1>Tiempo de espera promedio</h1>
       <form class="mb-3">
         <div class="mb-3">
@@ -161,6 +161,40 @@
         <h2 id="meanWaitTime">
           Tiempo de espera promedio por paciente: --- min
         </h2>
+      </div>
+    </section>
+
+    <section>
+      <h1>Total de horas de consulta</h1>
+      <form class="mb-3">
+        <div class="mb-3">
+          <label for="name_input" class="form-label">Doctor</label>
+          <input type="text" class="form-control" id="doctor_name_input" />
+        </div>
+        <div class="mb-3 row">
+          <div class="col">
+            <label for="pacient_count_input2" class="form-label"
+              >Cantidad de pacientes atendidos en la semana</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="pacient_count_input2"
+            />
+          </div>
+          <div class="col">
+            <label for="attention_time" class="form-label"
+              >Tiempo promedio de atención al paciente (minutos)</label
+            >
+            <input type="number" class="form-control" id="attention_time" />
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="getWeekHours()">
+          Calcular
+        </button>
+      </form>
+      <div>
+        <h2 id="weekHours">Horas trabajadas en la semana: ---</h2>
       </div>
     </section>
 
