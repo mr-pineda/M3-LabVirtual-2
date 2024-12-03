@@ -32,8 +32,9 @@ En todas las pantallas Hay un boton para agendar Hora, el cual solicita datos me
 - En el directiorio `assets` se encuentran archivos multimedia y de estilos utilizados en el sitio.
   - `./assets/img` contiene las imágenes utilizadas en el sitio.
   - `./assets/css` contiene los archivos de estilo (Usando archivos sass).
-  - `./lib/*` Contiene librerías utilizadas (En este caso solo Bootstrap).
-  - `./scripts/` Contiene scripts de JS y archivos .json.
+- El directorio `./lib/*` contiene las librerías utilizadas (En este caso solo Bootstrap).
+- El directorio `./src/scripts/` contiene los scripts de JavaScript.
+- El directorio `./src/data/` contiene los archivos .json.
 
 ## TO-DO (Rúbrica)
 
