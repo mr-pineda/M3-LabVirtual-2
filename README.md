@@ -46,9 +46,9 @@ En todas las pantallas Hay un boton para agendar Hora, el cual solicita datos me
 
 2. Programación Orientada a Eventos y Programación Asíncrona:
 
-   - [ ] Captura eventos del usuario en la página de Contacto:
-     - [ ] Implementa un **listener** para capturar el envío del formulario y muestra un mensaje de confirmación.
-     - [ ] Dispara un evento personalizado que simule la llegada de un nuevo paciente, mostrando una notificación en la página.
+   - [x] Captura eventos del usuario en la página de Contacto:
+     - [x] Implementa un **listener** para capturar el envío del formulario y muestra un mensaje de confirmación.
+     - [x] Dispara un evento personalizado que simule la llegada de un nuevo paciente, mostrando una notificación en la página.
    - [x] Implementa una función **async/await** para simular una llamada a una API REST que obtenga los **datos de los doctores**. Usa **Promise** para manejar los casos de éxito o fallo.
    - [x] Implementa el manejo de errores utilizando **try/catch** en las funciones asíncronas, y define un **callback** que se invoque al fallar una petición simulada.
 
