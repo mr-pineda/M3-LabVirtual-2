@@ -53,11 +53,11 @@ En todas las pantallas Hay un boton para agendar Hora, el cual solicita datos me
    - [x] Implementa el manejo de errores utilizando **try/catch** en las funciones asíncronas, y define un **callback** que se invoque al fallar una petición simulada.
 
 3. Programación Orientada a Objetos en JavaScript:
-   - [ ] Implementa una **clase** `Doctor` con las propiedades `nombre`, `especialidad`, y `años de experiencia`.
-     - [ ] Añade un método para mostrar la información de cada doctor y otro para calcular el total de pacientes atendidos por el doctor.
-   - [ ] Crea una subclase de `Doctor`, por ejemplo `Cirujano`, que extienda las funcionalidades de la clase base.
-   - [ ] Implementa el **encapsulamiento** en la clase, protegiendo la propiedad de `años de experiencia` mediante un getter y un setter.
-   - [ ] Usa el **polimorfismo** para sobrescribir un método en la subclase `Cirujano` que calcule el número de operaciones realizadas en lugar de consultas.
+   - [x] Implementa una **clase** `Doctor` con las propiedades `nombre`, `especialidad`, y `años de experiencia`.
+     - [x] Añade un método para mostrar la información de cada doctor y otro para calcular el total de pacientes atendidos por el doctor.
+   - [x] Crea una subclase de `Doctor`, por ejemplo `Cirujano`, que extienda las funcionalidades de la clase base.
+   - [x] Implementa el **encapsulamiento** en la clase, protegiendo la propiedad de `años de experiencia` mediante un getter y un setter.
+   - [x] Usa el **polimorfismo** para sobrescribir un método en la subclase `Cirujano` que calcule el número de operaciones realizadas en lugar de consultas.
 
 - **OTROS Requerimientos:**
   - [ ] README contiene explicaciones sobre la programación funcional aplicada.

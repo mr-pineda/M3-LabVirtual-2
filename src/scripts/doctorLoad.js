@@ -1,3 +1,70 @@
+class Doctor {
+  constructor({ name, specialty, workedYears }) {
+    this.name = name;
+    this.specialty = specialty;
+    this._workedYears = workedYears;
+    this.services = ['Medicina General'];
+    this.fonasa = false;
+  }
+
+  showInfo() {
+    console.log(`Doctor: ${this.name}`);
+    console.log(` - Especialidad: ${this.specialty}`);
+    console.log(` - Años de experiecia: ${this._workedYears}`);
+    console.log(` - Servicios que ofrece: ${this.services}`);
+    console.log(` - Atiende por Fonasa: ${this.fonasa ? 'SÍ' : 'NO'}`);
+  }
+
+  getWorkedYears() {
+    return this._workedYears;
+  }
+
+  addService(service) {
+    if (!this.services.includes(service)) this.services.push(service);
+  }
+
+  setFonasa(fonasa) {
+    this.fonasa = fonasa;
+    console.log(
+      `Ahora el Doctor "${this.name}" ${
+        this.fonasa ? 'SÍ' : 'NO'
+      } atiende por fonasa.`
+    );
+  }
+
+  setWorkedYears(years) {
+    this._workedYears = years;
+  }
+
+  getPacientCount() {
+    if (!this.pacientCount) this.pacientCount = Math.round(Math.random() * 100);
+    console.log(
+      `El Doctor ${this.pacientCount} ha atendido ${this.pacientCount} pacientes`
+    );
+  }
+}
+
+class Surgeon extends Doctor {
+  constructor({ name, specialty, workedYears }) {
+    this.super({ name, specialty, workedYears });
+  }
+
+  doSurgery() {
+    if (!this.pacientCount) {
+      this.pacientCount = 1;
+      return;
+    }
+    this.pacientCount++;
+  }
+
+  getPacientCount() {
+    if (!this.pacientCount) this.pacientCount = Math.round(Math.random() * 100);
+    console.log(
+      `El Cirujano ${this.pacientCount} ha realizado ${this.pacientCount} cirujías`
+    );
+  }
+}
+
 document.addEventListener('DOMContentLoaded', listDoctors);
 
 let doctors = null;
