@@ -4,6 +4,7 @@ class Doctor {
     this.specialty = specialty;
     this._workedYears = workedYears;
     this.services = ['Medicina General'];
+    this.pacientCount = 0;
     this.fonasa = false;
   }
 
@@ -41,20 +42,18 @@ class Doctor {
     console.log(
       `El Doctor ${this.pacientCount} ha atendido ${this.pacientCount} pacientes`
     );
+    return this.pacientCount;
   }
 }
 
 class Surgeon extends Doctor {
   constructor({ name, specialty, workedYears }) {
     this.super({ name, specialty, workedYears });
+    this.specialty('Cirujano');
     this.services.push('Cirujíua');
   }
 
   doSurgery() {
-    if (!this.pacientCount) {
-      this.pacientCount = 1;
-      return;
-    }
     this.pacientCount++;
   }
 
@@ -63,6 +62,7 @@ class Surgeon extends Doctor {
     console.log(
       `El Cirujano ${this.pacientCount} ha realizado ${this.pacientCount} cirujías`
     );
+    return this.pacientCount;
   }
 }
 
