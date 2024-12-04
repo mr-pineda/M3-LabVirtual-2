@@ -47,6 +47,7 @@ class Doctor {
 class Surgeon extends Doctor {
   constructor({ name, specialty, workedYears }) {
     this.super({ name, specialty, workedYears });
+    this.services.push('Cirujíua');
   }
 
   doSurgery() {
